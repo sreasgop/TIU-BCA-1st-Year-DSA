@@ -1,6 +1,4 @@
 #include<iostream>
-#include<conio.h>
-#include<process.h>
 
 using namespace std;
 
@@ -61,7 +59,8 @@ class linkedlist{
         tmp = (struct node*) new(struct node);
         tmp -> info = data; 
         tmp -> link = start; 
-        start = tmp; 
+        start = tmp;
+        this->Display(); 
     }
     // End of AddAtBeg()
 
@@ -76,7 +75,6 @@ class linkedlist{
             q = q->link; 
             if(q==NULL){
                 cout << "\nThere are less than " << pos << "element";
-                getch();
                 return; 
             }
         }
@@ -86,7 +84,7 @@ class linkedlist{
         tmp->link = q->link;
         tmp->info=data;
         q->link=tmp;
-
+        this->Display();
     }
     // End of AddAfter()
 
@@ -95,18 +93,18 @@ class linkedlist{
         struct node *tmp, *q; 
         int data; 
         if (start == NULL){
-            cout << "\n\nList is empty";
-            getch();
+            cout << "List is empty";
             return ;
         }
 
-        cout << "\n\nEnter the element for deletion: ";
+        cout << "Enter the element for deletion: ";
         cin >> data;
 
         if(start->info == data){
             tmp = start; 
             start = start->link;   //First element deleted
             delete(tmp);
+            this->Display();
             return;
         }
 
@@ -117,6 +115,7 @@ class linkedlist{
                 tmp = q->link;
                 q->link = tmp->link; 
                 delete(tmp);
+                this->Display();
                 return;
             }
 
@@ -129,28 +128,27 @@ class linkedlist{
             tmp = q->link;
             delete(tmp);
             q->link = NULL; 
+            this->Display();
             return;
         }
 
-        cout << "\n\nElement" << data << "not found";
-        getch();
+        cout << "Element " << data << " not found";
     }
     // End of Delete   
 
     void linkedlist::Display(){
         struct node *q; 
         if(start==NULL){
-            cout << "\n\nLinked List is empty.";
+            cout << "Linked List is empty.\n";
             return ;
         }
         q = start;
-        cout << "\n\nList is: ";
+        cout << "List is: ";
         while(q!=NULL){
             cout << q->info << " ";
             q = q->link;
         }
         cout << "\n";
-        getch();
     }
 
     void linkedlist::Count(){
@@ -164,7 +162,6 @@ class linkedlist{
             current = current->link;
         }
         cout << "Number of nodes in the linked list: " << counter << endl;
-        getch();
     }
 
     void linkedlist::Search(int data){
@@ -172,7 +169,7 @@ class linkedlist{
         struct node *q; 
         
         if(start==NULL){
-            cout << "\n\nLinked List is empty: Nothing to search for.";
+            cout << "Linked List is empty: Nothing to search for.\n";
             return;
         }
         q = start; 
@@ -188,13 +185,12 @@ class linkedlist{
         if(q==NULL){
             cout << data << " not found in list!" << endl;
         }
-        getch();
     }
 
     void linkedlist::Reverse() {
 
         if(start==NULL){
-            cout << "\n\nLinked List is empty: Nothing to search for.";
+            cout << "Linked List is empty: Nothing to search for.\n";
             return;
         }
         
@@ -212,27 +208,27 @@ class linkedlist{
         }
 
         start = prev;
-        cout << "\nList Reversed." << endl;
+        cout << "List Reversed." << endl;
         this->Display();
-    getch();
+     ;
 }
 
 
 int main() {
     int choice, n, m, position, i; 
     linkedlist po;
+    cout << "\nMain Menu:\n";
+    cout << "==========\n";
+    cout << "1. Create list\n";
+    cout << "2. Add at Beginning\n";
+    cout << "3. Add After\n";
+    cout << "4. Delete\n";
+    cout << "5. Display\n";
+    cout << "6. Count\n";
+    cout << "7. Reverse\n";
+    cout << "8. Search\n";
+    cout << "9. Quit\n";
     while(1){
-        cout << "\nMain Menu:\n";
-        cout << "==========\n";
-        cout << "1. Create list\n";
-        cout << "2. Add at Beginning\n";
-        cout << "3. Add After\n";
-        cout << "4. Delete\n";
-        cout << "5. Display\n";
-        cout << "6. Count\n";
-        cout << "7. Reverse\n";
-        cout << "8. Search\n";
-        cout << "9. Quit\n";
         cout << "\nEnter Choice: ";
         cin >> choice;
         switch (choice)
@@ -248,14 +244,14 @@ int main() {
             }
             break;
         case 2:
-            cout << "\n\nEnter the element: ";
+            cout << "Enter the element: ";
             cin >> m;
             po.AddAtBeg(m);
             break;
         case 3:
-            cout << "\n\nEnter the element: ";
+            cout << "Enter the element: ";
             cin >> m;
-            cout << "\n\nEnter the position after which element is inserted: ";
+            cout << "Enter the position after which element is inserted: ";
             cin >> position;
             po.AddAfter(m, position);
             break;
