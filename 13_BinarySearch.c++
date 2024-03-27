@@ -1,4 +1,5 @@
 #include<iostream>
+#define MAXSIZE 100
 using namespace std;
 
 int BinarySearch(int array[], int num, int low, int high){
@@ -11,16 +12,27 @@ int BinarySearch(int array[], int num, int low, int high){
         } else {
             high = mid - 1; 
         }
-
     }
-    return -1;
+    return -1;      
 }
 
 int main(){
-    int array[] = {3, 4, 5, 6, 7, 8, 9};
-    int x = 4; 
-    int n = sizeof(array)/sizeof(array[0]);
-    int result = BinarySearch(array, x, 0, n-1);
+    
+    int n, i, x;
+    int array[MAXSIZE];
+
+    cout << "Number of elements: "; 
+    cin >> n; 
+
+    cout << "Enter the sorted array: ";
+    for(i=0; i<n; i++){
+        cin >> array[i];
+    }
+
+    cout << "Search number: ";
+    cin >> x;
+    
+    int result = BinarySearch(array, x, 0, n);
 
     if(result==-1){
         cout << "Number not found!" << endl;
