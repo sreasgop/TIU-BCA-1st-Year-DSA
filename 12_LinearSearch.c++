@@ -15,7 +15,7 @@ int LinearSearch(int arr[], int arr_size, int num) {
 int main(){
     int array[MAXSIZE], n, i, num, value_index; 
     
-    cout << "Number of elements: ";
+    cout << "\nNumber of elements: ";
     cin >> n;
 
     cout << "Enter " << n << " elements: ";
@@ -31,7 +31,7 @@ int main(){
     if(value_index == -1){
         cout << "\nData not Found!" << endl; 
     } else {
-        cout << "\nFound at index no.: " << value_index << endl; 
+        cout << "\nFound at index no.: " << value_index << endl << endl; 
     }
 
     return 0;
