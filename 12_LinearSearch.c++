@@ -1,24 +1,38 @@
 #include<iostream>
+#define MAXSIZE 100
 using namespace std;
 
+int LinearSearch(int arr[], int arr_size, int num) {
+    int i, index;
+    for(i=0; i<arr_size; i++){
+    if(arr[i]==num){
+        return index = i;
+        }
+    } 
+    return -1;
+}
+
 int main(){
-    int arr[10], i, num, index; 
-    cout << "Enter 10 numbers: ";
-    for(i=0; i<10; i++){
-        cin >> arr[i];
+    int array[MAXSIZE], n, i, num, value_index; 
+    
+    cout << "Number of elements: ";
+    cin >> n;
+
+    cout << "Enter " << n << " elements: ";
+    for(i=0; i<n; i++){
+        cin >> array[i];
     }
 
     cout << "Enter number to search: ";
     cin >> num; 
 
-    for(i=0; i<10; i++){
-        if(arr[i]==num){
-            index = i;
-            break;
-        }
-    }
+    value_index = LinearSearch(array, n, num);
 
-    cout << "\nFound at index no.: " << index << endl; 
+    if(value_index == -1){
+        cout << "\nData not Found!" << endl; 
+    } else {
+        cout << "\nFound at index no.: " << value_index << endl; 
+    }
 
     return 0;
 }
