@@ -21,14 +21,14 @@ int main(){
     int n, i, x;
     int array[MAXSIZE];
 
-    cout << "Number of elements: "; 
+    cout << "\nNumber of elements: "; 
     cin >> n; 
 
     cout << "Enter the sorted array: ";
     for(i=0; i<n; i++){
         cin >> array[i];
     }
-
+    
     cout << "Search number: ";
     cin >> x;
     
@@ -37,7 +37,7 @@ int main(){
     if(result==-1){
         cout << "Number not found!" << endl;
     } else {
-        cout << "Element found at index: " << result << endl; 
+        cout << "\nElement found at index: " << result << endl << endl; 
     }
 
     return 0;
