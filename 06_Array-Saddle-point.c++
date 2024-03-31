@@ -16,10 +16,10 @@ int checkarray(int arr[][3], int row_col_no){
         }        
     } 
 
-    if(min >= max){
-        cout << "Yes" << endl;
+    if(min == max){
+        cout << "Saddle Point Found: " << min << endl;
     } else {
-        cout << "No" << endl;
+        cout << "No Saddle Point Found" << endl;
     }
 
     return 0;
