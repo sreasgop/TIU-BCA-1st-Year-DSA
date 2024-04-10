@@ -1,3 +1,5 @@
+// A saddle point of a matrix is an element which is both the largest element in its column and the smallest element in its row. A m x n matrix is said to have a saddle point if some entry a[i][j] is the smallest value in row i and the largest value in column j. Write a program that determines the saddle point if one exists (print location and value in array). 
+
 #include <iostream>
 using namespace std;
 
