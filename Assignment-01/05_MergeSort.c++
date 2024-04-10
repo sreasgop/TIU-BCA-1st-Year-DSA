@@ -1,3 +1,5 @@
+// Merge sort divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. Merge sort is also a sorting technique based on divide and conquer technique. Write a program to sort an array using merge sort technique.
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+// Quicksort is a Divide and Conquer algorithm. Write a program to sort an array using quick sort algorithm.
+
 #include <iostream>
 using namespace std;
 
