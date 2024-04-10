@@ -1,5 +1,6 @@
-// Write a program to search an element in an array using binary search technique.
+// Question:s Write a program to search an element in an array using binary search technique.
 
+// Code:
 #include<iostream>
 #define MAXSIZE 100
 using namespace std;
@@ -44,3 +45,11 @@ int main(){
 
     return 0;
 }
+
+
+// Output: 
+// Number of elements: 5
+// Enter the sorted array: 1 9 21 33 71
+// Search number: 21
+
+// Element found at index: 2
