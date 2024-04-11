@@ -1,3 +1,14 @@
+// Question: 
+// Write down the following functions/algorithm for a linear linked list and double linked list. 
+// a) Insert a node at the beginning of the list 
+// b) Delete a node at the end of the list 
+// c) Append a node at the end of the list 
+// d) Insert a node at any middle position of the list 
+// e) Delete a node from any middle position of the list 
+// f) Count number of nodes present in the list and find the sum of all nodes
+
+
+// Code:
 #include<iostream>
 
 using namespace std;
