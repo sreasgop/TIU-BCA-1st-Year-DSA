@@ -1,5 +1,6 @@
 // Write a program that accepts an amount in figures and prints that in words. For example, for an amount of Rs. 426, it should output the string Four hundred twenty six, whereas for Rs.316 it would be Three hundred sixteen. 
 
+// Code: 
 #include<iostream>
 #include<map>
 using namespace std;
@@ -35,7 +36,13 @@ int main() {
     cout << "Enter amount in figures: ";
     cin >> num;
 
-    cout << "Amount in Words: " << convertToWords(num);
+    cout << "Amount in Words: " << convertToWords(num)<< endl;
 
     return 0;
 }
+
+// Output
+/*
+Enter amount in figures: 234
+Amount in Words: Two Hundred Thirty Four
+*/
