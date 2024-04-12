@@ -88,6 +88,7 @@ void linkedlist::AddAfter(int data, int pos){
     q->next = tmp;
 }
 
+
 void linkedlist::Delete(){
     if (start == NULL){
         cout << "\n\nList is empty";
