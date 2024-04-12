@@ -1,5 +1,6 @@
 // In an inputted sentence words are separated by a random number of blanks. Write a program to convert the sentence in perfect form where each word will be separated by a single blank. 
 
+// Code:
 #include <iostream>
 
 using namespace std;
@@ -35,3 +36,8 @@ int main() {
 
     return 0;
 }
+// Output
+/*
+Enter the sentence: A quick  brown   fox jmps over   the lazy dog
+Sentence in perfect form: A quick brown fox jmps over the lazy dog
+*/
