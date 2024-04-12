@@ -1,4 +1,9 @@
+// Question:
 // Merge sort divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. Merge sort is also a sorting technique based on divide and conquer technique. Write a program to sort an array using merge sort technique.
+
+
+
+// Code: 
 
 #include <iostream>
 using namespace std;
@@ -79,6 +84,8 @@ int main()
     int arr[] = {6, 5, 12, 10, 9, 1};
     int size = sizeof(arr) / sizeof(arr[0]);
 
+    cout << "\n\nMerge Sort:\n===========" << endl; 
+
     cout << "\nUnsorted Array: \n";
     printArray(arr, size);
 
@@ -86,5 +93,24 @@ int main()
 
     cout << "\nSorted Array: \n";
     printArray(arr, size);
+
+    cout << endl;
+
     return 0;
 }
+
+
+
+// Output: 
+/*
+
+Merge Sort:
+===========
+
+Unsorted Array: 
+6 5 12 10 9 1 
+
+Sorted Array: 
+1 5 6 9 10 12 
+
+*/ 
