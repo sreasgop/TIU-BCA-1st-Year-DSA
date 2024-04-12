@@ -8,6 +8,7 @@
 // f) Count number of nodes present in the list and find the sum of all nodes 
 
 
+
 // Code: 
 
 #include<iostream>
@@ -150,6 +151,7 @@ void linkedlist::Count(){
         current = current->next;
     }
     cout << "Number of nodes in the linked list: " << counter << endl;
+    cout << "Sum of all nodes in the linked list: " << sum << endl;
 }
 
 
@@ -211,3 +213,58 @@ int main() {
     }
     return 0;
 }
+
+
+
+// Output:
+
+/*
+Main Menu:
+==========
+1. Create list
+2. Add at Beginning
+3. Add After
+4. Delete
+5. Display
+6. Count
+7. Quit
+
+Enter Choice: 1
+How many nodes do you want: 5
+Enter the elements: 10 20 30 40 50
+
+Enter Choice: 2
+
+
+Enter the element: 100
+
+Enter Choice: 3
+
+
+Enter the element: 99
+
+
+Enter the position after which element is inserted: 4
+
+Enter Choice: 5
+
+
+List is: 100 10 20 30 99 40 50
+
+Enter Choice: 4
+
+
+Enter the element for deletion: 99
+
+Enter Choice: 6
+Number of nodes in the linked list: 6
+
+Enter Choice: 5
+
+
+List is: 100 10 20 30 40 50
+
+Enter Choice: 7
+Exiting Program!
+
+*/
