@@ -9,6 +9,7 @@
 
 
 // Code:
+
 #include<iostream>
 
 using namespace std;
@@ -219,3 +220,45 @@ int main() {
     }
     return 0;
 }
+
+
+
+// Output: 
+/*
+Main Menu:
+==========
+1. Create list
+2. Add at Beginning
+3. Add After
+4. Delete
+5. Display
+6. Count
+7. Quit
+
+Enter Choice: 1
+How many nodes do you want: 4
+Enter the elements: 2 4 6 8
+
+Enter Choice: 2
+Enter the element: 100
+List is: 100 2 4 6 8
+
+Enter Choice: 3
+Enter the element: 99
+Enter the position after which element is inserted: 4
+List is: 100 2 4 6 99 8
+
+Enter Choice: 4
+Enter the element for deletion: 100
+List is: 2 4 6 99 8
+
+Enter Choice: 5
+List is: 2 4 6 99 8
+
+Enter Choice: 6
+Number of nodes in the linked list: 5
+Sum of all nodes:  119
+
+Enter Choice: 7
+Exitting Program!
+*/

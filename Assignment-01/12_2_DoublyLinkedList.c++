@@ -67,6 +67,7 @@ void linkedlist::AddAtBeg(int data){
         start->prev = tmp;
     
     start = tmp;
+    this->Display();
 }
 
 void linkedlist::AddAfter(int data, int pos){
@@ -87,17 +88,19 @@ void linkedlist::AddAfter(int data, int pos){
     if(q->next != NULL)
         q->next->prev = tmp;
     q->next = tmp;
+
+    this->Display();
 }
 
 
 void linkedlist::Delete(){
     if (start == NULL){
-        cout << "\n\nList is empty";
+        cout << "List is empty";
         return ;
     }
 
     int data; 
-    cout << "\n\nEnter the element for deletion: ";
+    cout << "Enter the element for deletion: ";
     cin >> data;
 
     struct node *tmp = start;
@@ -123,15 +126,16 @@ void linkedlist::Delete(){
     tmp->prev->next = tmp->next;
 
     delete tmp;
+    this->Display();
 }
 
 void linkedlist::Display(){
     if(start == NULL){
-        cout << "\n\nLinked List is empty.";
+        cout << "Linked List is empty.";
         return ;
     }
     struct node *q = start;
-    cout << "\n\nList is: ";
+    cout << "List is: ";
     while(q != NULL){
         cout << q->info << " ";
         q = q->next;
@@ -183,14 +187,14 @@ int main() {
             }
             break;
         case 2:
-            cout << "\n\nEnter the element: ";
+            cout << "Enter the element: ";
             cin >> m;
             po.AddAtBeg(m);
             break;
         case 3:
-            cout << "\n\nEnter the element: ";
+            cout << "Enter the element: ";
             cin >> m;
-            cout << "\n\nEnter the position after which element is inserted: ";
+            cout << "Enter the position after which element is inserted: ";
             cin >> position;
             po.AddAfter(m, position);
             break;
@@ -234,37 +238,25 @@ How many nodes do you want: 5
 Enter the elements: 10 20 30 40 50
 
 Enter Choice: 2
-
-
 Enter the element: 100
+List is: 100 10 20 30 40 50
 
 Enter Choice: 3
-
-
 Enter the element: 99
-
-
 Enter the position after which element is inserted: 4
-
-Enter Choice: 5
-
-
 List is: 100 10 20 30 99 40 50
 
 Enter Choice: 4
-
-
 Enter the element for deletion: 99
+List is: 100 10 20 30 40 50
+
+Enter Choice: 5
+List is: 100 10 20 30 40 50
 
 Enter Choice: 6
 Number of nodes in the linked list: 6
-
-Enter Choice: 5
-
-
-List is: 100 10 20 30 40 50
+Sum of all nodes in the linked list: 250
 
 Enter Choice: 7
 Exiting Program!
-
 */
