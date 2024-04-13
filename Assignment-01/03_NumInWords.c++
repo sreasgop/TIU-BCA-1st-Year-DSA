@@ -40,7 +40,7 @@ int main() {
     cout << "Enter amount in figures: ";
     cin >> num;
 
-    cout << "Amount in Words: " << convertToWords(num);
+    cout << "Amount in Words: " << convertToWords(num) << "\n\n";
 
     return 0;
 }
