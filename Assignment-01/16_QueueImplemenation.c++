@@ -1,3 +1,10 @@
+// Question:
+// Write a program to implement the Queue data structure. 
+
+
+
+// Code:
+
 #include<iostream>
 using namespace std;
 
@@ -43,13 +50,13 @@ void Display(){
 
 int main() {
     int ch; 
-    cout << "Main Menu:\n===========" << endl;
+    cout << "\nMain Menu:\n===========" << endl;
     cout << "1. Insert elements in Queue.\n";
     cout << "2. Delete elements from Queue.\n";
     cout << "3. Display Queue.\n";
     cout << "4. Exit\n";
     do{
-        cout << "Enter your choice: ";
+        cout << "\nEnter your choice: ";
         cin >> ch; 
         switch(ch){
             case 1: 
@@ -72,3 +79,39 @@ int main() {
 
     return 0;
 }
+
+
+
+// Output:
+/*
+Main Menu:
+===========
+1. Insert elements in Queue.
+2. Delete elements from Queue.
+3. Display Queue.
+4. Exit
+
+Enter your choice: 1
+Insert element in Queue: 10
+
+Enter your choice: 1
+Insert element in Queue: 20
+
+Enter your choice: 1
+Insert element in Queue: 30
+
+Enter your choice: 1
+Insert element in Queue: 40
+
+Enter your choice: 3
+Queue elements are: 10 20 30 40
+
+Enter your choice: 2
+Element deleted from queue is: 10
+
+Enter your choice: 3
+Queue elements are: 20 30 40
+
+Enter your choice: 4
+Exiting Program
+*/
