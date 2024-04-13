@@ -1,3 +1,10 @@
+// Question: 
+// Write a program to find the sum of the upper/lower triangle elements of a giver matrix. 
+
+
+
+// Code:
+
 #include <iostream>
 using namespace std;
 
