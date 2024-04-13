@@ -1,4 +1,9 @@
+// Question: 
 // In an inputted sentence words are separated by a random number of blanks. Write a program to convert the sentence in perfect form where each word will be separated by a single blank. 
+
+
+
+// Code: 
 
 #include <iostream>
 
@@ -26,12 +31,20 @@ void convertToPerfectForm(char* str) {
 
 int main() {
     char str[100];
-    cout << "Enter the sentence: ";
+    cout << "\nEnter the sentence: ";
     cin.getline(str, 100); 
     
     convertToPerfectForm(str);
 
-    cout << "Sentence in perfect form: " << str << endl;
+    cout << "Sentence in perfect form: " << str << "\n\n";
 
     return 0;
 }
+
+
+
+// Output:
+/*
+Enter the sentence: A    quick   brown fox              jumps over     the lazy dog
+Sentence in perfect form: A quick brown fox jumps over the lazy dog
+*/

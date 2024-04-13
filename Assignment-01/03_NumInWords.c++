@@ -37,7 +37,7 @@ string convertToWords(int num){
 int main() {
     int num; 
 
-    cout << "Enter amount in figures: ";
+    cout << "\nEnter amount in figures: ";
     cin >> num;
 
     cout << "Amount in Words: " << convertToWords(num) << "\n\n";
