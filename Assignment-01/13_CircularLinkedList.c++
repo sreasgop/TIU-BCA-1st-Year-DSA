@@ -1,3 +1,10 @@
+// Question: 
+// Write a program to create a circular linked list.
+
+
+
+// Code:
+
 #include <iostream>
 
 using namespace std;
@@ -103,13 +110,15 @@ int main() {
     CircularLinkedList cll;
     int choice, data;
 
+    cout << "\nMain Menu:\n==========\n";
+    cout << "1. Append" << endl;
+    cout << "2. Remove" << endl;
+    cout << "3. Display" << endl;
+    cout << "4. Exit" << endl;
+
     while (true) {
-        cout << "\nCircular Linked List Operations:" << endl;
-        cout << "1. Append" << endl;
-        cout << "2. Remove" << endl;
-        cout << "3. Display" << endl;
-        cout << "4. Exit" << endl;
-        cout << "Enter your choice: ";
+ 
+        cout << "\nEnter your choice: ";
         cin >> choice;
 
         switch (choice) {
@@ -124,7 +133,6 @@ int main() {
                 cll.remove(data);
                 break;
             case 3:
-                cout << "Circular Linked List:" << endl;
                 cll.display();
                 break;
             case 4:
@@ -137,3 +145,40 @@ int main() {
 
     return 0;
 }
+
+
+
+// Output:
+/*
+Main Menu:
+==========
+1. Append
+2. Remove
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter data to append: 10
+
+Enter your choice: 1
+Enter data to append: 20
+
+Enter your choice: 1
+Enter data to append: 30
+
+Enter your choice: 1
+Enter data to append: 40
+
+Enter your choice: 3
+10 20 30 40 
+
+Enter your choice: 2
+Enter data to remove: 20
+Node with data 20 removed successfully
+
+Enter your choice: 3
+10 30 40 
+
+Enter your choice: 4
+Exiting program...
+*/
