@@ -1,3 +1,10 @@
+// Question: 
+// Write a program/algorithm to represent a Stack using an array. 
+
+
+
+// Code:
+
 #include<iostream>
 
 #define MAXSIZE 100
