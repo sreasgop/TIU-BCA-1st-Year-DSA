@@ -1,4 +1,9 @@
+// Question:
 // Write a program that accepts an amount in figures and prints that in words. For example, for an amount of Rs. 426, it should output the string Four hundred twenty six, whereas for Rs.316 it would be Three hundred sixteen. 
+
+
+
+// Code: 
 
 #include<iostream>
 #include<map>
@@ -39,3 +44,11 @@ int main() {
 
     return 0;
 }
+
+
+
+// Output:
+/*
+Enter amount in figures: 989
+Amount in Words: Nine Hundred Eighty Nine
+*/
