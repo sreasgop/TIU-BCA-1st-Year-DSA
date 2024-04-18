@@ -1,3 +1,10 @@
+// Question:
+// Write a program to check whether a given number is triad or not. 
+
+
+
+// Code:
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -26,3 +33,11 @@ int main() {
 
     return 0;
 }
+
+
+
+// Output:
+/*
+Enter a number: 1729
+1729 is a triad number!
+*/

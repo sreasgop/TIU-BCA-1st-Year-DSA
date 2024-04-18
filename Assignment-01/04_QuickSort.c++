@@ -1,4 +1,9 @@
+// Question:
 // Quicksort is a Divide and Conquer algorithm. Write a program to sort an array using quick sort algorithm.
+
+
+
+// Code: 
 
 #include <iostream>
 using namespace std;
@@ -55,6 +60,8 @@ int main()
     int data[] = {8, 7, 6, 1, 0, 9, -2};
     int n = sizeof(data) / sizeof(data[0]);
 
+    cout << "\n\nQuick Sort:\n===========" << endl;
+
     cout << "\nUnsorted Array: \n";
     printArray(data, n);
 
@@ -62,4 +69,22 @@ int main()
 
     cout << "\nSorted Array: \n";
     printArray(data, n);
+
+    cout << "\n\n";
+
+    return 0;
 }
+
+
+
+// Output: 
+/*
+Quick Sort:
+===========
+
+Unsorted Array: 
+8 7 6 1 0 9 -2 
+
+Sorted Array: 
+-2 0 1 6 7 8 9 
+*/

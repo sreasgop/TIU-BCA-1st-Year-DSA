@@ -1,6 +1,13 @@
+// Question: 
+// Write a program/algorithm to evaluate postfix expression
+
+
+
+// Code:
+
 #include <iostream>
 #include <stack>
-#include <cctype> // For isdigit()
+#include <cctype>
 
 using namespace std;
 
@@ -43,9 +50,22 @@ int evaluate_postfix(string expression) {
 
 int main() {
     string postfix_expression ;
-    cout << "Enter the Expression: ";
-    cin >> postfix_expression;
+    
+    cout << "\nEvaluate Postfix Expressions:\n=============================\n";
+    cout << "\nEnter the Expression: ";
+    getline(cin, postfix_expression);
     int result = evaluate_postfix(postfix_expression);
-    cout << "Result: " << result << endl;
+    cout << "Result: " << result << "\n\n";
     return 0;
 }
+
+
+
+// Output:
+/*
+Evaluate Postfix Expressions:
+=============================
+
+Enter the Expression: 8 2 / 3 *
+Result: 12
+*/

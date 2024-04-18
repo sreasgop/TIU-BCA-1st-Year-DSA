@@ -1,4 +1,9 @@
+// Question: 
 // A saddle point of a matrix is an element which is both the largest element in its column and the smallest element in its row. A m x n matrix is said to have a saddle point if some entry a[i][j] is the smallest value in row i and the largest value in column j. Write a program that determines the saddle point if one exists (print location and value in array). 
+
+
+
+// Code: 
 
 #include <iostream>
 using namespace std;
@@ -28,8 +33,8 @@ void findSaddlePoint(int matrix[][MAX_COLS], int rows, int cols) {
         }
 
         if (saddlePointFound) {
-            cout << "Saddle Point Found: " << minInRow << endl;
-            cout << "At Index: " << "[" << rowIndexOfMin << "]" << "[" << colIndexOfMin << "]" << endl;
+            cout << "\nSaddle Point Found: " << minInRow << endl;
+            cout << "At Index: " << "[" << rowIndexOfMin << "]" << "[" << colIndexOfMin << "]" << endl << endl;
             return;
         }
     }
@@ -40,6 +45,8 @@ void findSaddlePoint(int matrix[][MAX_COLS], int rows, int cols) {
 int main() {
     int rows, cols;
     int matrix[MAX_ROWS][MAX_COLS];
+
+    cout << "\n\nFind Saddle Poit:\n=================\n\n";
 
     cout << "Enter the number of rows and columns of the matrix: ";
     cin >> rows >> cols;
@@ -55,3 +62,22 @@ int main() {
 
     return 0;
 }
+
+
+
+// Output: 
+/*
+
+Find Saddle Poit:
+=================
+
+Enter the number of rows and columns of the matrix: 3 3
+Enter the elements of the matrix:
+5 6 9
+4 3 5
+2 7 8
+
+Saddle Point Found: 5
+At Index: [0][0]
+
+*/

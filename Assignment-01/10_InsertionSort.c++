@@ -1,3 +1,10 @@
+// Question: 
+// Write a program/algorithm to sort an array of integers using insertion sort technique. 
+
+
+
+// Code: 
+
 #include <iostream>
 #define MAXSIZE 100
 using namespace std;
@@ -21,6 +28,8 @@ int main() {
     int n;
     int myarray[MAXSIZE];
 
+    cout << "\nInsertion Sort:\n===============\n\n";
+
     cout << "Number of elements: ";
     cin >> n; 
 
@@ -31,10 +40,26 @@ int main() {
 
     insertionSort(myarray, n);
 
-    cout << endl << "After Sorting: " << endl;
+    cout << endl << "Sorted Array: " << endl;
     for (int i = 0; i < n; i++) {
         cout << myarray[i] << " ";
     }
     cout << endl << endl;
     return 0;
 }
+
+
+
+// Output:
+/*
+
+Insertion Sort:
+===============
+
+Number of elements: 5
+Enter 5 integers in any order: 100 9 -1 0 2
+
+Sorted Array: 
+-1 0 2 9 100 
+
+*/
