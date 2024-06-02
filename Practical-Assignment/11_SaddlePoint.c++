@@ -1,44 +1,59 @@
-// Take a 2d array as input and find the minimum element of each row n chech whether it is the maximum element for that particular column.
+// Take a matrix as input and find the minimum element of each row n chech whether it is the maximum element for that particular column, i.e. Saddle Point.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int checkarray(int arr[][3], int row_col_no){
-    int min = arr[row_col_no][0]; 
-    int max = arr[0][row_col_no];  
+const int MAX_ROWS = 100;
+const int MAX_COLS = 100;
 
-    for(int i = 1; i < 3; i++){
-        if(min > arr[row_col_no][i]){
-            min = arr[row_col_no][i];
+void findSaddlePoint(int matrix[][MAX_COLS], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        int minInRow = matrix[i][0];
+        int colIndexOfMin = 0, rowIndexOfMin = 0;
+
+        for (int j = 1; j < cols; j++) {
+            if (matrix[i][j] < minInRow) {
+                minInRow = matrix[i][j];
+                colIndexOfMin = j;
+                rowIndexOfMin = i;
+            }  
         }
-        if(max < arr[i][row_col_no]){
-            max = arr[i][row_col_no];        
-        }        
-    } 
 
-    if(min == max){
-        cout << "Saddle Point Found: " << min << endl;
-    } else {
-        cout << "No Saddle Point Found" << endl;
+        bool saddlePointFound = true;
+        for (int k = 0; k < rows; k++) {
+            if (matrix[k][colIndexOfMin] > minInRow) {
+                saddlePointFound = false;
+                break;
+            }
+        }
+
+        if (saddlePointFound) {
+            cout << "\nSaddle Point Found: " << minInRow << endl;
+            cout << "At Index: " << "[" << rowIndexOfMin << "]" << "[" << colIndexOfMin << "]" << endl << endl;
+            return;
+        }
     }
 
-    return 0;
+    cout << "No Saddle Point Found" << endl;
 }
 
 int main() {
-    int arr[3][3];
-    cout << "Enter the a 3x3 2D Array: " << endl;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-            cin >> arr[i][j];
+    int rows, cols;
+    int matrix[MAX_ROWS][MAX_COLS];
+
+    cout << "\n\nFind Saddle Poit:\n=================\n\n";
+
+    cout << "Enter the number of rows and columns of the matrix: ";
+    cin >> rows >> cols;
+
+    cout << "Enter the elements of the matrix:" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cin >> matrix[i][j];
         }
     }
 
-    cout << "\n\n";
-
-    for(int i = 0; i < 3; i++){
-        checkarray(arr, i);
-    }
+    findSaddlePoint(matrix, rows, cols);
 
     return 0;
 }
