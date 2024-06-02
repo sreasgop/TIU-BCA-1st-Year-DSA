@@ -1,5 +1,4 @@
 #include<iostream>
-#include<conio.h>
 
 #define MAXSIZE 100
 
@@ -24,7 +23,6 @@ void Stack_Array::push(){
     int item; 
     if(top==MAXSIZE-1){
         cout << "\nThe Stack is full";
-        getch();
     } else {
         cout << "\nEnter element to be inserted: ";
         cin >> item;
@@ -36,7 +34,6 @@ void Stack_Array::pop(){
     int item; 
     if(top==-1){
         cout << "\nThe stack is empty";
-        getch();
     } else {
         item = stack[top--];
         cout << "\nThe Deleted item is: " << item;
