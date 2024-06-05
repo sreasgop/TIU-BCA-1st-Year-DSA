@@ -47,6 +47,7 @@ int main() {
     if(n==newSize){
         cout << key << " not found in the array!\n\n";
     } else{
+        cout << "Array after deletion: ";
         printArray(arr, newSize);
     }
 
