@@ -83,6 +83,8 @@ int main() {
     tree.insert(60);
     tree.insert(80);
 
+    std::cout << "\nBinary Search Tree Traversal:\n=============================\n\n";
+
     std::cout << "Inorder traversal: ";
     tree.inorderTraversal();
     std::cout << std::endl;
