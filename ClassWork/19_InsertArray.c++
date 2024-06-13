@@ -14,9 +14,7 @@ int main() {
     int capacity = sizeof(arr)/sizeof(arr[0]);
 
     cout << "\nNumber of elements: ";
-    cin >> n; 
-
-    capacity = sizeof(arr)/sizeof(arr[0]);
+    cin >> n;  
 
     cout << "Enter the elements: ";
     for(int i=0; i<n; i++) {
@@ -24,7 +22,7 @@ int main() {
     }
 
     cout << "Enter element to insert: ";
-    cin >> val; 
+    cin >> val;  
     cout << "Enter index position: "; 
     cin >> pos; 
 

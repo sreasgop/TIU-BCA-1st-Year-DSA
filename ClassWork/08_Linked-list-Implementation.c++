@@ -4,23 +4,19 @@ using namespace std;
 
 class linkedlist{
     
-    // Structure Declaration for the node
     struct node{
         int info; 
         struct node* link;
     };
 
-    // Private Structure variable decalration
     struct node *start;
     
     public:
 
-    // Constructor Defined
     linkedlist(){
         start = NULL;
     }
 
-    // Public Function Declaraed
     void createlist(int);
     void AddAtBeg(int); 
     void AddAfter(int, int);
@@ -31,18 +27,18 @@ class linkedlist{
     void Reverse();
 };
 
-    //This Function will create a new linked list of elements
+
     void linkedlist::createlist(int data){
         struct node *q, *tmp;
-        //raw node is created with operator
+
         tmp = (struct node*) new(struct node);
         tmp->info = data; 
         tmp->link = NULL;
 
-        if(start==NULL)        // if list is empty
+        if(start==NULL)  
             start = tmp; 
         else{
-            // element inserted at the end
+            
             q = start; 
             while(q->link!=NULL)
                 q = q -> link; 
@@ -50,10 +46,10 @@ class linkedlist{
 
         }
     }
-    // End of createlist()
+    
 
 
-    // Following function will add new element at the beginning
+    
     void linkedlist::AddAtBeg(int data){
         struct node* tmp; 
         tmp = (struct node*) new(struct node);
@@ -62,7 +58,7 @@ class linkedlist{
         start = tmp;
         this->Display(); 
     }
-    // End of AddAtBeg()
+    
 
 
 
@@ -70,7 +66,7 @@ class linkedlist{
         int i;
         struct node* tmp;  
         struct node* q = start; 
-        // Finding the position in linked list to insert
+        
         for(i=0; i<pos-1; i++){
             q = q->link; 
             if(q==NULL){
@@ -78,7 +74,7 @@ class linkedlist{
                 return; 
             }
         }
-        //End of for
+        
 
         tmp = (struct node*) new (struct node);
         tmp->link = q->link;
@@ -86,7 +82,7 @@ class linkedlist{
         q->link=tmp;
         this->Display();
     }
-    // End of AddAfter()
+    
 
 
     void linkedlist::Delete(){
@@ -121,7 +117,6 @@ class linkedlist{
 
             q = q->link;
         }   
-        //End of while
 
 
         if (q->link->info == data){     //last element deleted
@@ -134,7 +129,7 @@ class linkedlist{
 
         cout << "Element " << data << " not found";
     }
-    // End of Delete   
+    
 
     void linkedlist::Display(){
         struct node *q; 

@@ -56,11 +56,10 @@ int main() {
     int choice; 
     char ch; 
     
-    // Declaring an object to the class
+
     Stack_Array ps;
 
     do{
-        // A menu for stack operation
         cout << "\n1. Push";
         cout << "\n2. Pop";
         cout << "\n3. Traverse";
@@ -68,7 +67,7 @@ int main() {
         cin >> choice; 
         switch (choice)
         {
-        case 1:         // Calling push function by class object
+        case 1:         
             ps.push();
             break;
         case 2: 
