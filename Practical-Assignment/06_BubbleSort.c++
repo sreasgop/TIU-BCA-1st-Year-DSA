@@ -1,14 +1,20 @@
 #include<iostream>
 using namespace std;
 
-void BubbleSort(int array[], int size){
-    for(int i=0; i<size; i++){
-        for(int j=0; j<(size-i-1); j++){
-            if(array[j] > array[j+1]){
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+void BubbleSort(int arr[], int size){
+    int temp;
+    for(int i=size-1; i>=0; i--){
+        int is_swapped = 0;
+        for(int j=0; j<=i-1; j++){
+            if(arr[j]>=arr[j+1]){
+                temp = arr[j]; 
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                is_swapped++;
             }
+        }
+        if(is_swapped == 0){
+            break;
         }
     }
 }
